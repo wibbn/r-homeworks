@@ -1,13 +1,12 @@
 ?stopifnot
 
-n <- as.integer(readline(prompt="N = "))
+n <- as.integer(readline(prompt="Размер квадратной матрицы N = "))
 stopifnot(n > 0)
 A <- edit(matrix(0, n, n), title="Матрица коэфициентов")
 f <- edit(rep(c(0), n), title="Вектор решений")
 count <- as.integer(readline(prompt="Количество итераций: "))
 eps <- as.numeric(readline(prompt="eps = "))
 u0 <- rnorm(n)
-
 
 norm_vec <- function(x) sqrt(sum(x^2))
 
